@@ -20,6 +20,11 @@ functions:
       logstash_host: listener.logz.io
       logstash_port: 5050
       token: daoCAayhecXuoMsTENwDmTHfWwknBPjm
+    iamRoleStatementsName: ship-logs-role
+    iamRoleStatements:
+      - Effect: "Allow"
+        Action: "cloudwatch:PutMetricData"
+        Resource: "*"
 
   set-retention:
     handler: functions/set-retention/handler.handler
