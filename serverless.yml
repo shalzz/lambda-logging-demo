@@ -17,9 +17,9 @@ functions:
     description: Sends CloudWatch logs to Logz.io
     memorySize: 128
     environment:
-      logstash_host: <INSERT VALUE HERE>
-      logstash_port: <INSERT VALUE HERE>
-      token: <INSERT VALUE HERE>
+      logstash_host: listener.logz.io
+      logstash_port: 5050
+      token: daoCAayhecXuoMsTENwDmTHfWwknBPjm
 
   set-retention:
     handler: functions/set-retention/handler.handler
